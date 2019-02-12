@@ -2,7 +2,7 @@
 
 A pure javascript language control for your React Native app localization.
 
-[![npm version](https://badge.fury.io/js/react-native-i18n-localize.svg)](https://badge.fury.io/js/react-native-localize) ![MIT](https://img.shields.io/dub/l/vibe-d.svg)  
+[![npm version](https://badge.fury.io/js/react-native-i18n-localize.svg)](https://badge.fury.io/js/react-native-i18n-localize) ![MIT](https://img.shields.io/dub/l/vibe-d.svg)  
 
 ## Installation
 
