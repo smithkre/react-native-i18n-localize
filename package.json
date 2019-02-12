@@ -1,0 +1,31 @@
+{
+  "name": "react-native-i18n-localize",
+  "version": "1.0.0",
+  "description": "A pure javascript language control for your React Native app localization.\"",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smithkre/react-native-i18n-localize.git"
+  },
+  "keywords": [
+    "react-native-localize",
+    "react-native",
+    "localize",
+    "localization",
+    "i18n"
+  ],
+  "author": "Smith Krengkrud <smith.kre@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smithkre/react-native-i18n-localize/issues"
+  },
+  "homepage": "https://github.com/smithkre/react-native-i18n-localize#readme",
+  "peerDependencies": {
+    "react": "^16.0",
+    "react-native": ">=0.54"
+  },
+  "dependencies": {
+    "i18n-js": "^3.0.0"
+  }
+}
