@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import _i81n from 'i18n-js'
 
-class _I18nEvent extends Object {
+class _I18nLocalize extends Object {
   events = []
   availableLanguages = []
   langI18n = _i81n
@@ -53,7 +53,7 @@ class _I18nEvent extends Object {
   }
 }
 
-export const I18nEvent = new _I18nEvent()
+export const I18nLocalize = new _I18nLocalize()
 
 export const withLanguage = (WrappedComponent) => {
   return class extends Component {
@@ -62,11 +62,11 @@ export const withLanguage = (WrappedComponent) => {
     }
 
     componentDidMount = () => {
-      I18nEvent.addEventListener(this.handleChange)
+      I18nLocalize.addEventListener(this.handleChange)
     }
 
     componentWillUnmount = () => {
-      I18nEvent.removeEventListener(this.handleChange)
+      I18nLocalize.removeEventListener(this.handleChange)
     }
 
     handleChange = () => {
@@ -79,10 +79,10 @@ export const withLanguage = (WrappedComponent) => {
   }
 }
 
-export const i18n = I18nEvent.langI18n
+export const i18n = I18nLocalize.langI18n
 
 export default {
   i18n,
-  I18nEvent,
+  I18nLocalize,
   withLanguage
 }
