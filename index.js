@@ -25,7 +25,7 @@ class _I18nLocalize extends Object {
 
   setLanguage = (language) => {
     this.langI18n.locale = language
-    this.triggerEvent(language)
+    this.triggerEvent()
   }
 
   getAvailableLocale = () => {
