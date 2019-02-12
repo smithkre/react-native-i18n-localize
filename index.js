@@ -18,6 +18,14 @@ class _I18nLocalize extends Object {
     
     this.langI18n.fallbacks = true
     this.langI18n.translations = languagePack
+    
+    // Update language first time
+    this.setLanguage(this.availableLanguages[0])
+  }
+
+  setLanguage = (language) => {
+    this.langI18n.locale = language
+    this.triggerEvent(language)
   }
 
   getAvailableLocale = () => {
@@ -26,11 +34,6 @@ class _I18nLocalize extends Object {
 
   getLocale = () => {
     return this.langI18n.locale
-  }
-
-  switchLanguage = (language) => {
-    this.langI18n.locale = language
-    this.triggerEvent()
   }
 
   addEventListener = (handler) => {

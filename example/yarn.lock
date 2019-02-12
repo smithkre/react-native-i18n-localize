@@ -4536,10 +4536,10 @@ react-is@^16.6.3, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.1.tgz#a80141e246eb894824fb4f2901c0c50ef31d4cdb"
   integrity sha512-ioMCzVDWvCvKD8eeT+iukyWrBGrA3DiFYkXfBsVYIRdaREZuBjENG+KjrikavCLasozqRWTwFUagU/O4vPpRMA==
 
-react-native-i18n-localize@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-i18n-localize/-/react-native-i18n-localize-0.1.0.tgz#64fa6c8ec575d21d283326dd229ac1327146519a"
-  integrity sha512-47LOLeZaeoL0Epx/L3ZpBVQlEYLLj7TY2gg8swI+6BffY8P+JQ1d6Aiv6zCF0AJZGY6k2JfaANtd84jxC7MnzA==
+react-native-i18n-localize@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-i18n-localize/-/react-native-i18n-localize-0.2.0.tgz#8ceaed1f90873b23ca55f2fc758d08b959d274ea"
+  integrity sha512-NFbQDIgyuss/zkvzqYV4OgZv8MhbT98xNKD7JzYm3yFmFi1RkC/uxpXlf2DFSeS3UQkxQsDqHSP8uLNPbk07Tg==
   dependencies:
     i18n-js "^3.0.0"
 
