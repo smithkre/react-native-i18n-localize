@@ -20,7 +20,7 @@ class _I18nLocalize extends Object {
     this.langI18n.translations = languagePack
     
     // Update language first time
-    this.setLanguage(this.availableLanguages[0])
+    this.triggerEvent()
   }
 
   setLanguage = (language) => {
