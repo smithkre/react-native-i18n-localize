@@ -1,6 +1,6 @@
 {
   "name": "react-native-i18n-localize",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A pure javascript language control for your React Native app localization.\"",
   "main": "index.js",
   "scripts": {},
@@ -26,6 +26,7 @@
     "react-native": ">=0.54"
   },
   "dependencies": {
-    "i18n-js": "^3.0.0"
+    "i18n-js": "^3.0.0",
+    "tiny-emitter": "^2.1.0"
   }
 }

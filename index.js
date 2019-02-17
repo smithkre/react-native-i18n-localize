@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import _i81n from 'i18n-js'
+import EventEmitter from 'tiny-emitter'
 
-class _I18nLocalize extends Object {
-  events = []
+class _I18nLocalize extends EventEmitter {
   availableLanguages = []
   langI18n = _i81n
+
+  constructor(...args) {
+    super(...args)
+  }
 
   initialLanguage = (languagePack, defaultLocale = null) => {
     this.availableLanguages = Object.keys(languagePack)
@@ -20,12 +24,12 @@ class _I18nLocalize extends Object {
     this.langI18n.translations = languagePack
     
     // Update language first time
-    this.triggerEvent()
+    this.emit('changeLanguage')
   }
 
   setLanguage = (language) => {
     this.langI18n.locale = language
-    this.triggerEvent()
+    this.emit('changeLanguage')
   }
 
   getAvailableLocale = () => {
@@ -34,19 +38,6 @@ class _I18nLocalize extends Object {
 
   getLocale = () => {
     return this.langI18n.locale
-  }
-
-  addEventListener = (handler) => {
-    if(!this.events.includes(handler)) {
-      this.events.push(handler)
-    }
-  }
-
-  removeEventListener = (handler) => {
-    const index = this.events.indexOf(handler)
-    if(index != -1) {
-      this.events.splice(index, 1)
-    }
   }
 
   triggerEvent = () => {
@@ -65,11 +56,11 @@ export const withLanguage = (WrappedComponent) => {
     }
 
     componentDidMount = () => {
-      I18nLocalize.addEventListener(this.handleChange)
+      I18nLocalize.on('changeLanguage', this.handleChange)
     }
 
     componentWillUnmount = () => {
-      I18nLocalize.removeEventListener(this.handleChange)
+      I18nLocalize.off('changeLanguage', this.handleChange)
     }
 
     handleChange = () => {

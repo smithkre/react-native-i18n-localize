@@ -101,4 +101,20 @@ class Example extends Component {
 }
 ```
 
+## Note
+
+`withLanguage` work with React `Component` only
+If you want to manual catch event use
+
+
+```js
+componentDidMount() {
+    I18nLocalize.on('changeLanguage', this.updateData)
+}
+
+componentWillUnmount() {
+  I18nLocalize.off('changeLanguage', this.updateData)
+}
+```
+
 Browse the files in the [/example](https://github.com/smithkre/react-native-i18n-localize/tree/master/example) directory.
